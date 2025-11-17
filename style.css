@@ -1,13 +1,18 @@
+/* ============================= */
+/* الأساسيات العامة */
+/* ============================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   background-color: #222222;
   color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
 button {
   background-color: #169976;
   border-radius: 10px;
@@ -20,6 +25,7 @@ button {
   padding: 5px;
   font-size: large;
 }
+
 input {
   height: 40px;
   width: 100%;
@@ -32,9 +38,11 @@ input {
   color: white;
   transition: 0.5s;
 }
+
 input:focus {
   height: 50px;
 }
+
 .container {
   display: flex;
   align-items: center;
@@ -44,28 +52,35 @@ input:focus {
   margin-top: 2em;
   margin-inline: 10em;
 }
+
 .titleProject {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
+
 .titleProject h3 {
   opacity: 0.8;
   text-transform: uppercase;
 }
 
+/* ============================= */
+/* قسم الأسعار */
+/* ============================= */
 .pricingSection {
   width: 100%;
   display: flex;
   align-items: center;
   gap: 5px;
 }
+
 .pricingSection input {
   width: calc((100% - 20px) / 5);
 }
+
 .pricingSection span {
-  background-color: #1DCD9F;
+  background-color: #1dcd9f;
   height: 40px;
   width: fit-content;
   display: flex;
@@ -75,18 +90,24 @@ input:focus {
   padding: 5px;
   font-weight: 700;
 }
+
+/* ============================= */
+/* أزرار الإضافة والحذف */
+/* ============================= */
 .AddClear {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
 }
-.AddClear button{
-    width: 93%;
+
+.AddClear button {
+  width: 93%;
 }
+
 .AddClear svg {
-  height: 5%;
-  width: 5%;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -94,15 +115,20 @@ input:focus {
   color: #ddd;
   transition: 0.5s;
 }
+
+/* ============================= */
+/* قسم البحث */
+/* ============================= */
 .SearchSection {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .SearchSection svg {
-  height: 5%;
-  width: 5%;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -110,19 +136,21 @@ input:focus {
   color: #ddd;
   transition: 0.5s;
 }
+
 .SearchSection svg:hover,
 .AddClear svg:hover {
   background-color: white;
-  height: 4%;
-  width: 4%;
+  color: #222;
 }
+
 .SearchSection button {
   width: 40%;
 }
 
+/* ============================= */
+/* الجدول */
+/* ============================= */
 table {
-  /* font-family: Arial, Helvetica, sans-serif; */
-  /* border-collapse: collapse; */
   width: 100%;
 }
 
@@ -144,9 +172,98 @@ th {
   border-top: 1px solid #ddd;
   text-transform: uppercase;
 }
+
 .NoData {
   font-size: larger;
-  color: #1DCD9F;
+  color: #1dcd9f;
   font-weight: 700;
-  /* opacity: 0.5; */
+}
+
+/* ============================= */
+/* الاستجابة - Media Queries */
+/* ============================= */
+@media screen and (max-width: 768px) {
+  .container {
+    margin-inline: 1em;
+    gap: 0.5em;
+  }
+
+  .pricingSection {
+    flex-direction: column;
+  }
+
+  .pricingSection input,
+  .pricingSection span {
+    width: 100%;
+  }
+
+  .AddClear {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  .AddClear button {
+    width: 100%;
+  }
+
+  .AddClear svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .SearchSection {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  .SearchSection button,
+  .SearchSection svg {
+    width: 100%;
+  }
+
+  input {
+    font-size: 18px;
+    height: 45px;
+  }
+
+  .pricingSection span {
+    font-size: 16px;
+    height: 45px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .titleProject h1 {
+    font-size: 24px;
+  }
+
+  .titleProject h3 {
+    font-size: 14px;
+  }
+
+  input,
+  button {
+    font-size: 16px;
+    height: 40px;
+  }
+
+  .pricingSection input,
+  .pricingSection span {
+    font-size: 14px;
+    height: 40px;
+  }
+
+  .AddClear svg,
+  .SearchSection svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  table {
+    font-size: 12px;
+  }
 }
