@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="titleProject">
+        <h1>CRUDS</h1>
+        <h3>Create Read Update Delete Search</h3>
+      </div>
+      <input type="text" placeholder="title" id="title" />
+      <div class="pricingSection">
+        <input type="number" placeholder="price" id="price" />
+        <input type="number" placeholder="taxes" id="taxes" />
+        <input type="number" placeholder="ads" id="ads" />
+        <input type="number" placeholder="discount" id="discount" />
+        <span id="total">Total: </span>
+      </div>
+      <input type="number" placeholder="count" id="count" />
+      <input type="text" placeholder="category" id="category" />
+      <div class="AddClear">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+          <path
+            fill="#1DCD9F"
+            d="M598.6 118.6C611.1 106.1 611.1 85.8 598.6 73.3C586.1 60.8 565.8 60.8 553.3 73.3L361.3 265.3L326.6 230.6C322.4 226.4 316.6 224 310.6 224C298.1 224 288 234.1 288 246.6L288 275.7L396.3 384L425.4 384C437.9 384 448 373.9 448 361.4C448 355.4 445.6 349.6 441.4 345.4L406.7 310.7L598.7 118.7zM373.1 417.4L254.6 298.9C211.9 295.2 169.4 310.6 138.8 341.2L130.8 349.2C108.5 371.5 96 401.7 96 433.2C96 440 103.1 444.4 109.2 441.4L160.3 415.9C165.3 413.4 169.8 420 165.7 423.8L39.3 537.4C34.7 541.6 32 547.6 32 553.9C32 566.1 41.9 576 54.1 576L227.4 576C266.2 576 303.3 560.6 330.8 533.2C361.4 502.6 376.7 460.1 373.1 417.4z"
+          />
+        </svg>
+        <button id="create">Create</button>
+      </div>
+
+      <input type="text" placeholder="search" id="search" />
+      <div class="SearchSection">
+        <button id="searchByTitle">Search By Title</button>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+          <path
+            fill="#1DCD9F"
+            d="M500.7 138.7L512 149.4L512 96C512 78.3 526.3 64 544 64C561.7 64 576 78.3 576 96L576 224C576 241.7 561.7 256 544 256L416 256C398.3 256 384 241.7 384 224C384 206.3 398.3 192 416 192L463.9 192L456.3 184.8C456.1 184.6 455.9 184.4 455.7 184.2C380.7 109.2 259.2 109.2 184.2 184.2C109.2 259.2 109.2 380.7 184.2 455.7C259.2 530.7 380.7 530.7 455.7 455.7C463.9 447.5 471.2 438.8 477.6 429.6C487.7 415.1 507.7 411.6 522.2 421.7C536.7 431.8 540.2 451.8 530.1 466.3C521.6 478.5 511.9 490.1 501 501C401 601 238.9 601 139 501C39.1 401 39 239 139 139C238.9 39.1 400.7 39 500.7 138.7z"
+          />
+        </svg>
+        <button id="searchByCategoty">Search By Categoty</button>
+      </div>
+      <button id="deleteAll">Delete All</button>
+      <table>
+        <tr>
+          <th>id</th>
+          <th>title</th>
+          <th>price</th>
+          <th>taxes</th>
+          <th>ads</th>
+          <th>discount</th>
+          <th>total</th>
+          <th>category</th>
+          <th>update</th>
+          <th>delete</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>i phone</td>
+          <td>20$</td>
+          <td>0.2$</td>
+          <td>3$</td>
+          <td>2$</td>
+          <td>18$</td>
+          <td>i phone</td>
+          <td><button id="update" data-id="">update</button></td>
+          <td><button id="delete" data-id="">delete</button></td>
+        </tr>
+      </table>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
